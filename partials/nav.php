@@ -17,18 +17,16 @@ echo '
                     <a class="nav-link" href="About.php">About</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="Cards.php">Cards</a>
+                    <a class="nav-link" href="domains.php">Domains</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="contact.php">Contact</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="Rateus.php">Rate Us</a>
-                    </li>
+                    
                     
                     <li class="nav-item">
                     <button type="button" class="mx-4" style="background-color:Yellow;width:170px;height:40px;border:none;color:white;">
-                    <a class="nav-link" href="Mydisc.php">Add My Discussion</a></button>
+                    <a class="nav-link" href="Mydisc.html">Rate Us</a></button>
                     
                     </li>
                 </ul>';

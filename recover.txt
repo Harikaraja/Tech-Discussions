@@ -60,3 +60,14 @@
                     <input type="text" id="count" style=" width:11px;height:18px;"/>
                     <img src="assets/images/downvote.jpg" alt="Loading...." class="me-3 rounded-circle" style="width: 20px; height: 20px;"/>
                     <input type="text" id="count" style=" width:11px;height:18px;"/>
+
+
+                    <img src="assets/images/img'.$s.'.jpg" height="250px" width="500px" class="card-img-top" alt="python">
+
+
+
+ssssssssssssssssssssssssss
+                    <img src="assets/images/domains/img'.$s.'.jpg" height="250px" width="500px" class="card-img-top" alt="python">
+
+                       <label for="avatar"><h4>Upload an Image </h4></label>
+              <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">

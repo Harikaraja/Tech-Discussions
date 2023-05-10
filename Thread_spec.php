@@ -145,7 +145,10 @@
               $comment_desc = $row['comment_content'];
               $timestamp = $row['time stamp'];
               $comment_by = $row['comment_by'];
-             
+              $comment_id = $row['comment_id'];
+              $upvotes = $row['upvotes'];
+              $downvotes = $row['downvotes'];
+              $thread_id = $_GET['thread_id'];
               $ques_found = false;
               $sql2 = "SELECT user_email FROM `users` WHERE user_id='$comment_by'";
               $result2 = mysqli_query($conn,$sql2);
@@ -162,7 +165,7 @@
                       <h5><p><i>' .$comment_desc. '</i></p></h5> 
                       <strong class="text-muted">Posted by : ' .$row2['user_email']. '  on ' .$timestamp. ' </strong>
                     </div> 
-                      
+                    
                     </div>
                 </div>
                   
@@ -188,6 +191,9 @@
 
 
     </div>
+    <script>
+    
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
