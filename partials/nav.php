@@ -23,6 +23,10 @@ echo '
                     <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
+                    <a class="nav-link" href="Rateus.php">Rate Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
                     <button type="button" class="mx-4" style="background-color:Yellow;width:170px;height:40px;border:none;color:white;">
                     <a class="nav-link" href="Mydisc.php">Add My Discussion</a></button>
                     
@@ -32,15 +36,13 @@ echo '
                
           echo '
             
-            <div class="sub-menu-wrap">
-            <div class="sub-menu">
-              <div class="user-info mx-3">
-              <img src="assets/images/profile.jpg" width="30px" height="30px" style="margin-left:65px;"/>
+           
+              <div>
+              <img src="assets/images/profile.jpg" width="30px" height="30px" style="margin-left:50px;" /><br/>
               <h6>' .$_SESSION['useremail']. '</h6>
               </div>
 
-            </div>
-            </div>
+            
             <a href="Logout.php">
             <button type="button" class="btn btn-success ml-4 mx-3" id="signup-button" >Logout</button>
             <a/>';

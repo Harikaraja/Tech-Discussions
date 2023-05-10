@@ -1,0 +1,62 @@
+  <?php
+      
+              $id = $_GET['catid'];
+              $sql = "SELECT * FROM `threads` WHERE thread_cat_id=$id";
+              $result = mysqli_query($conn,$sql);
+              $nums = mysqli_num_rows($result);
+              $p=1;
+             
+              if($nums != 0){
+
+                  while($p<=$nums){
+                    $p = $p+1;
+                    $row = mysqli_fetch_assoc($result);
+                    $cat_name = $row['thread_title'];
+                    $cat_desc = $row['thread_desc'];
+                    $date_time = $row['time stamp'];
+                    $user_id = $row['thread_user_id'];
+                    $thread_id = $row['thread_id'];
+                    $ques_found = false;
+                    
+                    $sql2 = "SELECT user_email FROM `users` WHERE user_id='$user_id'";
+                    $result2 = mysqli_query($conn,$sql2);
+                    $row2 = mysqli_fetch_assoc($result2);
+                    
+                    echo '
+                      <div class="d-flex my-3" id="main_div">
+                          <img src="assets/images/user.png" alt="Loading...." class="me-3 rounded-circle"
+                            style="width: 60px; height: 60px;" />
+                            
+                          <div>
+                          <strong class="text-muted">Posted by : ' .$row2['user_email']. '  on ' .$date_time. ' </strong>
+                            <br/>
+                          <div   id="internal">
+                            <h3><a href="Thread_spec.php?thread_id=' .$thread_id. '" id="decs"> ' .$cat_name. ' </a></h3> 
+                            
+                          </div> 
+                          <h5><p><i>' .$cat_desc. '</i></p></h5>   
+                          </div>
+                      </div>
+                        
+                    ';
+                
+                  }
+             
+              }
+              else{
+
+                echo'
+                    <div class="mt-4 p-5 bg-secondary text-white rounded container">
+                    <h1><i>No Questions Found </i>&#128542</h1>
+                    <p><h4>Be the first person to ask a Question &#128519</h4></p>
+                  </div>';
+              }
+              
+                
+            
+            
+        ?>
+<img src="assets/images/upvote.jpg" alt="Loading...." class="me-3 rounded-circle" style="width: 30px; height: 30px;"/>
+                    <input type="text" id="count" style=" width:11px;height:18px;"/>
+                    <img src="assets/images/downvote.jpg" alt="Loading...." class="me-3 rounded-circle" style="width: 20px; height: 20px;"/>
+                    <input type="text" id="count" style=" width:11px;height:18px;"/>

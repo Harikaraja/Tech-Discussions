@@ -147,7 +147,6 @@
               $comment_by = $row['comment_by'];
              
               $ques_found = false;
-
               $sql2 = "SELECT user_email FROM `users` WHERE user_id='$comment_by'";
               $result2 = mysqli_query($conn,$sql2);
               $row2 = mysqli_fetch_assoc($result2);
@@ -157,9 +156,9 @@
                     <img src="assets/images/user.png" alt="Loading...." class="me-3 rounded-circle"
                       style="width: 60px; height: 60px;" />
                     <div>
-                    <h4><b> ' .$comment_by. ' </b></h4>
+                    
+                    <h5><b> ' .$row2['user_email']. ' </b></h5>
                     <div style = "display:flex;justify-content:center; gap:25rem" id="internal">
-                     
                       <h5><p><i>' .$comment_desc. '</i></p></h5> 
                       <strong class="text-muted">Posted by : ' .$row2['user_email']. '  on ' .$timestamp. ' </strong>
                     </div> 

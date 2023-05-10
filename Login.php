@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <style>
     * {
         margin: 0;
@@ -111,9 +112,11 @@
 </head>
 
 <body>
-    <button type="button" class="mx-4"
-        style="background-color:pink;width:170px;height:40px;border:none;color:white;margin-left:2rem;margin-top:2rem;">
-        <a class="nav-link" href="index.php">Home</a></button>
+
+
+    <?php include 'partials/nav.php'; ?>
+    <?php include 'partials/footer.php' ?>
+    <?php include 'partials/connetion.php' ?>
     <?php 
           
          $showError = "false";
@@ -139,18 +142,25 @@
                 $row = mysqli_fetch_assoc($result) ;
                 //echo $row;
                 if($snum==1) {
-                    session_start();
+                    //session_start();
                     $_SESSION['loggedin'] = true;
                     $_SESSION['useremail']=$email;
                    
                     $_SESSION['id'] = $row['user_id'];
                     
                     //echo "loggged in";
-                    header("Location:./index.php");
+                   // header("Location:./index.php");
                     //exit();
+                    echo '
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Login Sucessfull !!!!.Please Go Back to Home . Happy Browsing &#128525 </strong> 
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        
+                    ';
                 } 
                 
-            }
+            }else{
             echo '
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>Unable to Login. Check Your Username or Password !!!!</strong> 
@@ -158,12 +168,15 @@
                 </div>
                 
               ';
+            }
             
          }
         
 
-     ?>
+    ?>
     <div class="main">
+    
+        <a class="nav-link" href="index.php">Home</a></button>
         <div class="register" id="signupPage">
             <h2>Login Here</h2>
             <form id="register" method="post" action="Login.php">
@@ -176,8 +189,9 @@
                 <input type="password" id="password" name="password" placeholder="Confirm Password" required
                     autocomplete="off" />
                 <br /><br />
-                <a href="Forgotpassword.php" class="forgot">Forgot Password </a><br /><br />
-                <input type="submit" value="Login" id="submit" name="submit" />
+                <a href="Forgotpassword.php" class="forgot">Forgot Password </a><br />
+                <input type="submit" value="Login" id="submit" name="submit" /><br/>
+               
                 <br /><br />
             </form>
         </div>
