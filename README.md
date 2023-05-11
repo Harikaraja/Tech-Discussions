@@ -4,7 +4,7 @@
 
 
 Tech-Discussions is a place where students can post his/her doubts related to various domains. There are several domains present and the user can choose a domain
-and can post his or her query , and the other members of the communit can answer the questions posted by the user.
+and can post his or her query , and the other members of the community can answer the questions posted by the user.
 
 Posting a Query or answering a Query can only be done if the person is logged in unless the person logs in he doesnt have access to perform the operations 
 on the website
