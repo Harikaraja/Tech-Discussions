@@ -21,7 +21,7 @@
 
     <div class="container">
         <h1>Contact Me</h1>
-        <p>Feel free to contact us and we will get back to you ass sson as we can.</p>
+        <p>Feel free to contact us and we will get back to you ass soon as we can.</p>
         <form action="https://formspree.io/f/xjvdllaj" method="POST">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" required autocomplete="off">

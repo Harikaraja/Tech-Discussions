@@ -165,7 +165,13 @@
                       <h5><p><i>' .$comment_desc. '</i></p></h5> 
                       <strong class="text-muted">Posted by : ' .$row2['user_email']. '  on ' .$timestamp. ' </strong>
                     </div> 
-                    
+                    <div>
+                        <button class="btn btn-outline-success" ><a href="upvote.php?com_id=' .$comment_id. '&thread_id=' .$thread_id. ' " style="text-decoration:none;color:green;">Upvote(' .$upvotes. ' )</a>
+                           
+                        </button>
+                        <button class="btn btn-outline-danger" ><a href="downvote.php?com_id=' .$comment_id. '&thread_id=' .$thread_id. '  " style="text-decoration:none;color:red;">Downvote(' .$downvotes. ' )</a>
+                        </button>
+                    </div>
                     </div>
                 </div>
                   

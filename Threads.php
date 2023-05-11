@@ -114,7 +114,7 @@
                     <ul>Stay on topic. ...</ul>
                 </list>
                 <p><strong>This is a peer-to-peer forum for sharing knowledge with Each other</strong></p>
-                <h5><b>Posted by : </b></h5></br>
+                
                 <a class="btn btn-warning btn-lg" href="#ques" role="button">View Thread</a>
 
             </div>

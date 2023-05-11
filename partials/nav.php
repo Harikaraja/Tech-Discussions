@@ -26,7 +26,7 @@ echo '
                     
                     <li class="nav-item">
                     <button type="button" class="mx-4" style="background-color:Yellow;width:170px;height:40px;border:none;color:white;">
-                    <a class="nav-link" href="Mydisc.html">Rate Us</a></button>
+                    <a class="nav-link" href="Mydisc.php">Rate Us</a></button>
                     
                     </li>
                 </ul>';
